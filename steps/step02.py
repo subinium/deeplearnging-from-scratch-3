@@ -18,9 +18,11 @@ class Square(Function):
         return x**2
 
 
-x = Variable(np.array(10))
-f = Square()
-y = f(x)
+if __name__ == '__main__':
 
-print(type(y))
-print(y.data)
+    x = Variable(np.array(10))
+    f = Square()
+    y = f(x)
+
+    print(type(y))
+    print(y.data)

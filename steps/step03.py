@@ -7,13 +7,15 @@ class Exp(Function):
         return np.exp(x)
 
 
-A = Square()
-B = Exp()
-C = Square()
+if __name__ == '__main__':
 
-x = Variable(np.array(0.5))
-a = A(x)
-b = B(a)
-y = C(b)
+    A = Square()
+    B = Exp()
+    C = Square()
 
-print(y.data)
+    x = Variable(np.array(0.5))
+    a = A(x)
+    b = B(a)
+    y = C(b)
+
+    print(y.data)
