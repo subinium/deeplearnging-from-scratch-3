@@ -12,10 +12,8 @@ class Variable:
 
     def backward(self):
         funcs = [self.creator]
-        f = funcs.pop()
         while funcs:
             f = funcs.pop()
-
             x, y = f.input, f.output
             x.grad = f.backward(y.grad)
             if x.creator is not None:
@@ -70,6 +68,8 @@ if __name__ == '__main__':
     a = A(x)
     b = B(a)
     y = C(b)
+    print(y.data)
+
     y.grad = np.array(1.0)
     y.backward()
     print(x.grad)
