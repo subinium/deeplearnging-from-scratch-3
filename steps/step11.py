@@ -28,8 +28,9 @@ class Add(Function):
         return (y,)
 
 
-xs = [Variable(np.array(3)), Variable(np.array(2))]
-f = Add()
-ys = f(xs)
-y = ys[0]
-print(y.data)
+if __name__ == '__main__':
+    xs = [Variable(np.array(3)), Variable(np.array(2))]
+    f = Add()
+    ys = f(xs)
+    y = ys[0]
+    print(y.data)
